@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
   selector: 'app-profile-info',
   imports: [CommonModule, IonicModule],
   templateUrl: './profile-info.component.html',
-  styleUrl: './profile-info.component.css',
+  styleUrl: './profile-info.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProfileInfoComponent {}

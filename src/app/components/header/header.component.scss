@@ -1,6 +1,6 @@
 ion-header {
     background-color: var(--ion-color-secondary);
-    height: 11rem;
+    height: 13rem;
     border-radius: 3rem;
     ion-toolbar {
       --background: var(--ion-color-secondary);
@@ -22,7 +22,12 @@ ion-header {
       ion-title {
         display: flex;
         justify-content: center;
-        margin-left: 4.7rem;
+        align-items: center;
+
+        img {
+          margin: auto;
+          display: block;
+        }
       }
     }
   }
