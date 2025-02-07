@@ -1,8 +1,10 @@
 ion-header {
-    background-color: #000;
+    background-color: var(--ion-color-secondary);
+    height: 11rem;
+    border-radius: 3rem;
     ion-toolbar {
-      --background: #000;
-      --color: #fff;
+      --background: var(--ion-color-secondary);
+      --color: var(--ion-color-primary);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -12,7 +14,15 @@ ion-header {
       }
   
       ion-button {
-        color: #ffb400;
+        color: var(--ion-color-primary);
+        background-color: black;
+        border-radius: 2rem;
+      }
+
+      ion-title {
+        display: flex;
+        justify-content: center;
+        margin-left: 4.7rem;
       }
     }
   }
