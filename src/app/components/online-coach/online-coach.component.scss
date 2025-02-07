@@ -7,3 +7,60 @@
     margin-bottom: 16px;
   }
 }
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  min-width: 65vw;
+  height: 18vh;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 1;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  i {
+    font-size: 20px;
+  }
+}
