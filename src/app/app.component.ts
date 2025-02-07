@@ -14,6 +14,15 @@ export class AppComponent {
     { title: 'Trash', url: '/folder/trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [
+    'Meu Corpo',
+    'Objetivos e Conquistas',
+    'Personal Online',
+    'Programas',
+    'Conteúdos',
+    'Configurações',
+    'Ajuda',
+    'Sair',
+  ];
   constructor() {}
 }
