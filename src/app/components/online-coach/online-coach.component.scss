@@ -14,7 +14,8 @@
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 16px;
+  border-radius: 1rem;
+  gap: 1rem;
   
   &::-webkit-scrollbar {
     display: none;
@@ -47,9 +48,6 @@
     z-index: 0;
   }
 
-  &.active {
-    transform: scale(1.05);
-  }
 }
 
 .card-content {
