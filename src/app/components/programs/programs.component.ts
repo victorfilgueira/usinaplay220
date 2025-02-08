@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { ProgramCard } from 'src/app/interfaces/program-card.interface';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-programs',
@@ -34,14 +35,16 @@ export class ProgramsComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit(): void {
-    this.loadPrograms();
+    //this.loadPrograms();
   }
 
   loadPrograms(): void {
-    // Aqui você pode adicionar a lógica para carregar os programas
+    this.firebaseService.getProgramCards().subscribe((cards: ProgramCard[]) => {
+      this.cards = cards;
+    });
   }
 
   toggleProgramStart(cardId: number): void {

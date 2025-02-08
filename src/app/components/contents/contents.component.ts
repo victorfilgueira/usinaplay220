@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { ContentCard } from '../../interfaces/content-card.interface';
+import { FirebaseService } from 'src/app/services/firebase.service';
 
 @Component({
   selector: 'app-contents',
@@ -24,9 +25,15 @@ export class ContentsComponent implements OnInit {
       name: '',
     },
   ];
-  constructor() {}
+  constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit(): void {
-    // Inicialização do componente
+    //this.loadContents();
+  }
+
+  loadContents(): void {
+    this.firebaseService.getContentCards().subscribe((cards: ContentCard[]) => {
+      this.cards = cards;
+    });
   }
 }
