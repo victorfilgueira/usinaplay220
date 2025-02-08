@@ -1,9 +1,10 @@
 .online-coach-container {
   padding: 16px;
-  
+  margin-left: 1.5rem;
+
   h2 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: x-large;
+    font-weight: 400;
     margin-bottom: 16px;
   }
 }
@@ -12,7 +13,6 @@
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding: 20px 0;
   
   &::-webkit-scrollbar {
     display: none;
@@ -64,3 +64,14 @@
     font-size: 20px;
   }
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.add-icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
