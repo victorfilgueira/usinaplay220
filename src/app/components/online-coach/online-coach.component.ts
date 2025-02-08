@@ -9,7 +9,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule],
 })
 export class OnlineCoachComponent implements OnInit {
-  cards = [
+  cards: any[] = [
     {
       imageUrl: '../../../assets/images/lift.jpg',
       text: 'Novo Treino',
@@ -28,7 +28,18 @@ export class OnlineCoachComponent implements OnInit {
     },
   ];
 
+  activeCardIndex: number = 0;
+
   constructor() {}
 
   ngOnInit() {}
+
+  onScroll(event: any) {
+    // Calcula qual card está mais próximo do centro da visualização
+    const container = event.target;
+    const scrollPosition = container.scrollLeft;
+    const cardWidth = container.querySelector('.card').offsetWidth;
+
+    this.activeCardIndex = Math.round(scrollPosition / cardWidth);
+  }
 }
