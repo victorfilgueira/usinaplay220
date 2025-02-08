@@ -8,9 +8,10 @@
     <div class="cards-container">
       <div class="card" *ngFor="let card of cards" [style.background-image]="'url(' + card.imageUrl + ')'">
         <div class="card-content">
-          <button class="add-button">
-            <span>{{ card.text }}</span>
-          </button>
+          <div class="text-container">
+            <span class="continue-text" *ngIf="card.isStarted">continuar treinando</span>
+            <span class="main-text">{{ card.text }}</span>
+          </div>
         </div>
       </div>
     </div>
