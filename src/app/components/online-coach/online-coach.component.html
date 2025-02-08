@@ -1,7 +1,7 @@
 <div class="online-coach-container">
   <div class="header-container">
     <h2>PERSONAL ONLINE</h2>
-    <ion-icon class="add-icon" color="primary" name="add-circle-outline"></ion-icon>
+    <ion-icon class="add-icon" color="primary" name="add-circle-outline" (click)="openCreateCardModal()"></ion-icon>
   </div>
 
   <div class="cards-container" (scroll)="onScroll($event)">
@@ -9,7 +9,7 @@
          [style.background-image]="'url(' + card.imageUrl + ')'"
          [class.active]="i === activeCardIndex">
       <div class="card-content">
-        <button class="add-button" *ngIf="i === activeCardIndex" (click)="openCreateCardModal()">
+        <button class="add-button" *ngIf="i === activeCardIndex">
           <i class="material-icons">add</i>
           <span>{{ card.text }}</span>
         </button>
