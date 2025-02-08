@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { TrainingCard } from '../interfaces/traning-card.interface';
 import { ProgramCard } from '../interfaces/program-card.interface';
 import { ContentCard } from '../interfaces/content-card.interface';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
