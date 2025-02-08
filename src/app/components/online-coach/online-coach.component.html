@@ -6,10 +6,12 @@
 
   <div class="cards-container">
     <div class="card" *ngFor="let card of cards" [style.background-image]="'url(' + card.imageUrl + ')'">
-      <button class="add-button">
-        <i class="material-icons">add</i>
-        <span>{{ card.text }}</span>
-      </button>
+      <div class="card-content">
+        <button class="add-button">
+          <i class="material-icons">add</i>
+          <span>{{ card.text }}</span>
+        </button>
+      </div>
     </div>
   </div>
 </div>

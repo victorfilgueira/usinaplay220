@@ -13,14 +13,18 @@ export class OnlineCoachComponent implements OnInit {
     {
       imageUrl: '../../../assets/images/lift.jpg',
       text: 'Novo Treino',
+      footer: 'Lift',
     },
     {
       imageUrl: '../../../assets/images/yoga.jpg',
-      text: 'Yoga',
-    },
-    {
-      imageUrl: 'assets/images/treino-background-3.jpg',
       text: 'Novo Treino',
+      footer: 'Yoga',
+    },
+
+    {
+      imageUrl: '../../../assets/images/spinning.jpg',
+      text: 'Novo Treino',
+      footer: 'Spinning',
     },
   ];
 
