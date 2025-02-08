@@ -1,0 +1,18 @@
+<div class="online-coach-container">
+    <div class="header-container">
+      <h2>PROGRAMAS</h2>
+      <ion-badge slot="start" class="new-label">NOVO</ion-badge>
+    </div>
+  
+
+    <div class="cards-container">
+      <div class="card" *ngFor="let card of cards" [style.background-image]="'url(' + card.imageUrl + ')'">
+        <div class="card-content">
+          <button class="add-button">
+            <span>{{ card.text }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

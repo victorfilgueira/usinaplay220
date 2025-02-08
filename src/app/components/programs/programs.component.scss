@@ -1,0 +1,63 @@
+.online-coach-container {
+    padding: 16px;
+    margin-left: 1.5rem;
+  
+    h2 {
+      font-size: x-large;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+  }
+  
+  .cards-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .card {
+    min-width: 65vw;
+    height: 18vh;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      z-index: 0;
+    }
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .new-label {
+    color: white;
+    font-weight: 300;
+    border-radius: 2rem;
+    font-size: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    bottom: 4px;
+    right: -6px;
+  }
+  
+  
