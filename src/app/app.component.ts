@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { initializeApp } from '@angular/fire/app';
 import { Platform } from '@ionic/angular';
-import { environment } from 'src/environments/environment';
+import { environment, firebaseConfig } from 'src/environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,7 +15,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      initializeApp(environment.firebaseConfig);
+      initializeApp(firebaseConfig);
     });
   }
 
