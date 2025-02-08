@@ -1,14 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-
-interface ProgramCard {
-  id: number;
-  name: string;
-  imageUrl: string;
-  text: string;
-  isStarted: boolean;
-}
+import { ProgramCard } from 'src/app/interfaces/program-card.interface';
 
 @Component({
   selector: 'app-programs',

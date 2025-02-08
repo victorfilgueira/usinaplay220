@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from '../components/header/header.component';
 import { OnlineCoachComponent } from '../components/online-coach/online-coach.component';
 import { ProgramsComponent } from '../components/programs/programs.component';
+import { ContentsComponent } from '../components/contents/contents.component';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +15,7 @@ import { ProgramsComponent } from '../components/programs/programs.component';
     HeaderComponent,
     OnlineCoachComponent,
     ProgramsComponent,
+    ContentsComponent,
   ],
   styleUrls: ['./home.page.scss'],
 })
