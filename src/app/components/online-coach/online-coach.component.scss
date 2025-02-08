@@ -1,6 +1,7 @@
 .online-coach-container {
   padding: 16px;
   margin-left: 1.5rem;
+  border-radius: 1rem;
 
   h2 {
     font-size: x-large;
@@ -12,7 +13,9 @@
 .cards-container {
   display: flex;
   overflow-x: auto;
-  gap: 20px;
+  scroll-snap-type: x mandatory;
+  border-radius: 1rem;
+  gap: 1rem;
   
   &::-webkit-scrollbar {
     display: none;
@@ -20,6 +23,9 @@
 }
 
 .card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  transition: all 0.3s ease;
   min-width: 65vw;
   height: 18vh;
   border-radius: 1rem;
@@ -38,14 +44,26 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
+    border-radius: 1rem;
     z-index: 0;
   }
+
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .add-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 10px 20px;
   background: transparent;
@@ -70,13 +88,11 @@
     z-index: 2;
   }
 
-
   span {
     font-size: 1.2rem;
     color: white;
     z-index: 2;
     max-width: 3rem;
-
   }
 }
 
@@ -85,10 +101,19 @@
   align-items: center;
 }
 
-
 .add-icon {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   z-index: 2;
 }
 
+.footer-text {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    z-index: 3;
+}

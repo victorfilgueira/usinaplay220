@@ -4,12 +4,12 @@
       <ion-content>
 
         <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+          <ion-list-header>Bem vindo, Leonardo</ion-list-header>
 
-          @for (label of labels; track label) {
+          @for (label of appPages; track label) {
             <ion-item lines="none">
-              <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-              <ion-label>{{ label }}</ion-label>
+              <ion-icon aria-hidden="true" slot="start" [ios]="label.icon" [md]="label.icon"></ion-icon>
+              <ion-label>{{ label.title }}</ion-label>
             </ion-item>
           }
         </ion-list>

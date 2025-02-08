@@ -4,14 +4,18 @@
     <ion-icon class="add-icon" color="primary" name="add-circle-outline"></ion-icon>
   </div>
 
-  <div class="cards-container">
-    <div class="card" *ngFor="let card of cards" [style.background-image]="'url(' + card.imageUrl + ')'">
+  <div class="cards-container" (scroll)="onScroll($event)">
+    <div class="card" *ngFor="let card of cards; let i = index" 
+         [style.background-image]="'url(' + card.imageUrl + ')'"
+         [class.active]="i === activeCardIndex">
       <div class="card-content">
-        <button class="add-button">
+        <button class="add-button" *ngIf="i === activeCardIndex">
           <i class="material-icons">add</i>
           <span>{{ card.text }}</span>
         </button>
+        <span class="footer-text" *ngIf="i !== activeCardIndex">{{ card.footer }}</span>
       </div>
     </div>
   </div>
+
 </div>
