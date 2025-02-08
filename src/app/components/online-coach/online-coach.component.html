@@ -5,24 +5,10 @@
   </div>
 
   <div class="cards-container">
-    <div class="card" [style.background-image]="'url(../../../assets/images/lift.jpg)'">
+    <div class="card" *ngFor="let card of cards" [style.background-image]="'url(' + card.imageUrl + ')'">
       <button class="add-button">
         <i class="material-icons">add</i>
-        <span>Novo Treino</span>
-      </button>
-    </div>
-    
-    <div class="card" [style.background-image]="'url(assets/images/treino-background-2.jpg)'">
-      <button class="add-button">
-        <i class="material-icons">add</i>
-        <span>Novo Treino</span>
-      </button>
-    </div>
-    
-    <div class="card" [style.background-image]="'url(assets/images/treino-background-3.jpg)'">
-      <button class="add-button">
-        <i class="material-icons">add</i>
-        <span>Novo Treino</span>
+        <span>{{ card.text }}</span>
       </button>
     </div>
   </div>

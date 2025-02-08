@@ -9,6 +9,21 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule],
 })
 export class OnlineCoachComponent implements OnInit {
+  cards = [
+    {
+      imageUrl: '../../../assets/images/lift.jpg',
+      text: 'Novo Treino',
+    },
+    {
+      imageUrl: '../../../assets/images/yoga.jpg',
+      text: 'Yoga',
+    },
+    {
+      imageUrl: 'assets/images/treino-background-3.jpg',
+      text: 'Novo Treino',
+    },
+  ];
+
   constructor() {}
 
   ngOnInit() {}
